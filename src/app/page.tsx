@@ -1,6 +1,7 @@
 import { Calendar } from "@/components/ui/calendar";
 import "./globals.css";
 import { ModeToggle } from "@/components/ui/mode-toggle";
+import { Combobox } from "@/components/ui/combobox";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       </div>
       <div className="w-full max-w-2xl items-center justify-items-center">
         <Calendar captionLayout="dropdown" />
+        <Combobox />
       </div>
     </div>
   );
