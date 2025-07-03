@@ -71,9 +71,14 @@ function Calendar({
         ),
         dropdown_root: cn(
           "relative has-focus:border-ring border border-input shadow-xs has-focus:ring-ring/50 has-focus:ring-[3px] rounded-md",
+          "bg-background text-foreground dark:bg-background dark:text-foreground dark:border-input",
           defaultClassNames.dropdown_root
         ),
-        dropdown: cn("absolute inset-0 opacity-0", defaultClassNames.dropdown),
+        dropdown: cn(
+          "absolute inset-0 opacity-0",
+          "bg-background text-foreground dark:bg-background dark:text-foreground",
+          defaultClassNames.dropdown
+        ),
         caption_label: cn(
           "select-none font-medium",
           captionLayout === "label"

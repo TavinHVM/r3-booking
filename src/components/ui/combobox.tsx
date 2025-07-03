@@ -21,24 +21,20 @@ import {
 
 const frameworks = [
   {
-    value: "next.js",
-    label: "Next.js",
+    value: "sala1",
+    label: "Sala 1",
   },
   {
-    value: "sveltekit",
-    label: "SvelteKit",
+    value: "sala2",
+    label: "Sala 2",
   },
   {
-    value: "nuxt.js",
-    label: "Nuxt.js",
+    value: "sala3",
+    label: "Sala 3",
   },
   {
-    value: "remix",
-    label: "Remix",
-  },
-  {
-    value: "astro",
-    label: "Astro",
+    value: "sala4",
+    label: "Sala 4",
   },
 ]
 
