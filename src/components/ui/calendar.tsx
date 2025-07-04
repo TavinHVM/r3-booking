@@ -95,7 +95,7 @@ function Calendar({
             defaultClassNames.week_number
           ),
           day: cn(
-            "flex-1 h-26 max-h-full min-h-10 p-0 text-center select-none transition-colors duration-100 hover:bg-accent text-foreground font-medium hover:rounded-md",
+            "flex-1 h-19 max-h-full min-h-10 p-0 text-center select-none transition-colors duration-100 hover:bg-accent text-foreground font-medium hover:rounded-md",
             defaultClassNames.day
           ),
           range_start: cn(
