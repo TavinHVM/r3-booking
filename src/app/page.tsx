@@ -3,6 +3,7 @@ import "./globals.css";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem, } from "@/components/ui/select";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -10,8 +11,14 @@ export default function Home() {
       <Card className="w-full max-w-2xl items-center justify-items-center">
         <CardHeader className="w-full font-bold flex flex-row items-center justify-between gap-2">
           <ModeToggle />
-          <span className="font-bold">R3 - Agendamento</span>
-          <a></a>
+          <span className="font-bold text-3xl">Agendamento</span>
+          <Image
+            src="/r3logo.png"
+            alt="Logo"
+            width={40}
+            height={40}
+            className="rounded-full"
+          />
         </CardHeader>
 
         <CardContent className="w-full max-w-2xl items-center justify-items-center">
