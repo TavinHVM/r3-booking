@@ -1,43 +1,42 @@
-import { Calendar } from "@/components/ui/calendar";
+"use client";
 import "./globals.css";
 import { ModeToggle } from "@/components/ui/mode-toggle";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem, } from "@/components/ui/select";
 import Image from "next/image";
+import { Calendar } from "@/components/ui/calendar";
+import React from "react";
+import { Booking } from "@/components/ui/booking";
 
 export default function Home() {
+  const [selectedDay, setSelectedDay] = React.useState<Date | undefined>()
+
   return (
-    <div className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <Card className="w-full max-w-2xl items-center justify-items-center">
-        <CardHeader className="w-full font-bold flex flex-row items-center justify-between gap-2">
+    <>
+      <div className="flex items-center justify-between p-4 relative">
+        <div className="flex items-center gap-2">
           <ModeToggle />
-          <span className="font-bold text-3xl">Agendamento</span>
+        </div>
+        <div className="flex items-center">
           <Image
             src="/r3logo.png"
             alt="Logo"
-            width={40}
-            height={40}
+            width={70}
+            height={70}
             className="rounded-full"
           />
-        </CardHeader>
+        </div>
+      </div>
 
-        <CardContent className="w-full max-w-2xl items-center justify-items-center">
-          <Calendar className="w-full max-w-2xl" captionLayout="dropdown" />
-          <div className="w-full max-w-2xl items-center justify-items-center">
-            <Select>
-              <SelectTrigger className="w-full max-w-2xl">
-                <SelectValue placeholder="Selecione a sala" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="sala1">Sala 1</SelectItem>
-                <SelectItem value="sala2">Sala 2</SelectItem>
-                <SelectItem value="sala3">Sala 3</SelectItem>
-                <SelectItem value="sala4">Sala 4</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
+      <h1 className="w-full text-center text-4xl font-bold">Agendamento de Reuniões</h1>
+      <div className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <Calendar className="w-full"
+          mode="single"
+          selected={selectedDay}
+          onSelect={setSelectedDay}
+        />
+        
+        <Booking />
+      </div>
+
+    </>
   );
 }
