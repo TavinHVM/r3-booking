@@ -37,6 +37,8 @@ function Calendar({
         formatters={{
           formatMonthCaption: (date) =>
             date.toLocaleString("pt-BR", { month: "long", year: "numeric" }),
+          formatWeekdayName: (date) =>
+            date.toLocaleDateString("pt-BR", { weekday: "short" }).replace(".", "").replace(/^(.)/, (l) => l.toUpperCase()),
           ...formatters,
         }}
         classNames={{
