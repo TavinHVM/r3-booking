@@ -11,11 +11,11 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex items-center justify-between p-4 relative">
-        <div className="flex items-center gap-2">
+      <div className="flex items-center justify-between p-1 relative">
+        <div className="flex items-center gap-2 ml-4">
           <ModeToggle />
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mr-4 mt-2">
           <Image
             src="/r3logo.png"
             alt="Logo"
@@ -26,14 +26,14 @@ export default function Home() {
         </div>
       </div>
 
-      <h1 className="w-full text-center text-4xl font-bold">Agendamento de Reuniões</h1>
-      <div className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <h1 className="w-full text-center text-4xl font-bold mb-2">Agendamento de Reuniões</h1>
+      <div className="w-full items-center justify-items-center min-h-screen p-8 pb-20 gap-4 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <Calendar className="w-full"
           mode="single"
           selected={selectedDay}
           onSelect={setSelectedDay}
         />
-        
+
         <Booking />
       </div>
 
