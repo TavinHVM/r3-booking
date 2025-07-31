@@ -26,7 +26,7 @@ function Calendar({
   const defaultClassNames = getDefaultClassNames()
 
   return (
-    <div className="rounded-2xl border shadow-md p-6 bg-background max-w-5xl max-h-[700px] w-full mx-auto">
+    <div className="rounded-2xl border shadow-md p-6 bg-background max-w-5xl w-full mx-auto h-full min-h-[700px]">
       <DayPicker
         showOutsideDays={showOutsideDays}
         className={cn(
@@ -95,7 +95,7 @@ function Calendar({
             defaultClassNames.week_number
           ),
           day: cn(
-            "flex-1 h-19 max-h-full min-h-10 p-0 text-center select-none transition-colors duration-100 hover:bg-accent text-foreground font-medium hover:rounded-md",
+            "flex-1 h-26 max-h-full min-h-10 p-0 text-center select-none transition-colors duration-100 hover:bg-accent text-foreground font-medium hover:rounded-md",
             defaultClassNames.day
           ),
           range_start: cn(
